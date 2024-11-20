@@ -83,3 +83,5 @@ to run binary
 build static binary for linx, you can also build for Windows Mac etc
 CGO_ENABLED=0 GOOS=linux GOARCH=amd64 go build -a -installsuffix cgo -ldflags '-extldflags "-static"' -o rsd .
 
+
+endpoint http://site.com/stream?magnet=
