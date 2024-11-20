@@ -70,3 +70,16 @@ Logs important events and errors to help with debugging and monitoring.
 
 Summary
 The primary purpose of this application is to enable users to stream video files directly from torrent magnet links over HTTP, providing a seamless and efficient way to watch videos without the need for full downloads. It leverages Go's concurrency model to handle multiple requests and tasks efficiently, ensuring a smooth streaming experience.
+
+
+how to run
+go run main.go -port 8080 -dir /tmp/downloads
+
+ubuntu 22.04/debian 12 64bit
+to run binary
+./rsd -port 8080 -dir /tmp/downloads
+
+
+build static binary for linx, you can also build for Windows Mac etc
+CGO_ENABLED=0 GOOS=linux GOARCH=amd64 go build -a -installsuffix cgo -ldflags '-extldflags "-static"' -o rsd .
+
